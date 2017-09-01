@@ -46,4 +46,11 @@ function cogStart() {
 
 function cogFinish() {
   console.log('the animation is finished!');
+  content.style.display = 'none';
+  relay();
+}
+
+function relay() {
+  window.requestAnimationFrame(relay);
+    resume();
 }
