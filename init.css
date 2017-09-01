@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body {
+  background-color: #DAF7A6;
+  display: flex;
+  font-size: 1rem;
+  font-family: 'Source Code Pro', monospace;
+  margin: 20px;
+  align-self: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: inherit;
+  align-self: center;
+}
+
+.wrap-animate {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
