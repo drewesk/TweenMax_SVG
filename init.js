@@ -34,6 +34,10 @@ TL.from(gear, 1, {
 }).from(chap_5, 1, {
   x: 300,
   autoAlpha: 0
+}).to(image, 2.5, {
+  ease: Elastic.easeOut.config(2.5, 0.2),
+  y: -500,
+  onComplete: hideImage
 }).from(gear, 1, {
   width: 100,
   y: -300,
@@ -48,6 +52,11 @@ function cogFinish() {
   console.log('the animation is finished!');
   content.style.display = 'none';
   relay();
+}
+
+function hideImage() {
+  body.style.background = 'black';
+  image.style.display = 'none';
 }
 
 function relay() {
