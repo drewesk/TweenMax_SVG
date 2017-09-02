@@ -8,51 +8,25 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
     <link rel="stylesheet" href="./init.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
   <body>
-    <canvas id="climbing"></canvas>
-    <script src="./term.js"></script>
-    <script>
-
-                                          __________               __
-                                          \______   \ ____   ____ |  | __
-                                           |       _//  _ \_/ ___\|  |/ /
-                                           |    |   (  <_> )  \___|    <
-                         /\                |____|_  /\____/ \___  >__|_ \
-                        /**\     /\               \/            \/     \/
-                       /    \   /**\
-                      /  /\  \ /    \        /\    /\  /\      /\            /\/\/\  /\
-                     /  /  \  /      \      /  \/\/  \/  \  /\/  \/\  /\  /\/ / /  \/  \
-                    /  /    \/ /\     \    /    \ \  /    \/ /   /  \/  \/  \  /    \   \
-                   /  /      \/  \/\   \  /      \    /   /    \
-                   __/__/_______ /___ __\___\__________________________________________________
-
-                                88   88                        88            88
-                                88   ""                        88            ""
-                                88                             88
-                     ,adPPYba,  88   88   88,dPYba,,adPYba,    88,dPPYba,    88   8b,dPPYba,     ,adPPYb,d8
-                    a8"     ""  88   88   88P'   "88"    "8a   88P'    "8a   88   88     `"8a   a8"    `Y88
-                    8b          88   88   88      88      88   88       d8   88   88       88   8b       88
-                    "8a,   ,aa  88   88   88      88      88   88b,   ,a8"   88   88       88   "8a,   ,d88
-                     `"Ybbd8"'  88   88   88      88      88   8Y"Ybbd8"'    88   88       88    `"YbbdP"Y8
-                                                                                                 aa,    ,88
-                                                                                                  0gggggg0
-  </script>
-  <script src="./termComplete.js"></script>
 
     <div class="wrap-animate">
 
-      <h1 id="title">Animate</h1>
+      <h1 class="title" id="title">Andrew Eskenazi</h1>
 
-      <div id="googleMax"><a href="http://www.google.com">Hyperlink</a></div>
+      <canvas class="canvasIntro" id="granular"></canvas>
 
-        <li id="chap1">Chapter 1</li>
-        <li id="chap2">Chapter 2</li>
-        <li id="chap3">Chapter 3</li>
-        <li id="chap4">Chapter 4</li>
-        <li id="chap5">Chapter 5</li>
+        <ul>
+          <li class="chapter" id="chap1">Chapter 1</li>
+          <li class="chapter" id="chap2">Chapter 2</li>
+          <li class="chapter" id="chap3">Chapter 3</li>
+          <li class="chapter" id="chap4">Chapter 4</li>
+          <li class="chapter" id="chap5">Chapter 5</li>
+        </ul>
 
         <img id="chessOct" src="./chess.svg.png" alt="chessAnimation"/>
-        <svg id="gearSet" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 85.53 83.57" enable-background="new 0 0 85.53 83.568" xml:space="preserve">
+        <svg class="gearSVG" id="gearSet" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 85.53 83.57" enable-background="new 0 0 85.53 83.568" xml:space="preserve">
           <path id="gearItem" fill-rule=".page-template-page-standard-blog-phpevenodd"
           clip-rule="evenodd"
           fill="#604135"
@@ -61,7 +35,7 @@
         </path>
       </svg>
     </div>
-
+    <script src="./three.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" charset="utf-8"></script>
     <script src="./init.js" charset="utf-8"></script>
 

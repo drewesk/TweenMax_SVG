@@ -1,46 +1,62 @@
-const title = document.getElementById('title');
-const content = document.getElementsByClassName('wrap-animate')[0];
-const link = document.getElementById('googleMax');
-const chap_1 = document.getElementById('chap1');
-const chap_2 = document.getElementById('chap2');
-const chap_3 = document.getElementById('chap3');
-const chap_4 = document.getElementById('chap4');
-const chap_5 = document.getElementById('chap5');
-const gear = document.getElementById('gearSet');
-const gearItem = document.getElementById('gearItem');
-const image = document.getElementById('chessOct');
+const title = document.getElementById('title'),
+  body = document.querySelector('body'),
+  ulContent = document.querySelector('ul'),
+  content = document.getElementsByClassName('wrap-animate')[0],
+  chap_1 = document.getElementById('chap1'),
+  chap_2 = document.getElementById('chap2'),
+  chap_3 = document.getElementById('chap3'),
+  chap_4 = document.getElementById('chap4'),
+  chap_5 = document.getElementById('chap5'),
+  gear = document.getElementById('gearSet'),
+  gearItem = document.getElementById('gearItem');
+
+const canvasIntro = document.getElementsByClassName('canvasIntro')[0];
 
 const TL = new TimelineLite();
 
 TL.from(gear, 1, {
   x: -800,
   ease: Bounce.easeOut,
-  onStart: cogStart
-}).from(title, 1, {
-  x: 300,
+  onStart: cogStart,
+}).to(gear, 3, {
+  y: -560,
+  rotation: 360
+}).fromTo(gear, 1, {
+  y: -200
+},{
+  width: 300,
+  y: 1000
+}).from(gear, 2, {
+  width: 100,
+  y: -300,
+}).from(title, 0.5, {
+  x: -300,
   autoAlpha: 0
-}).from(chap_1, 1, {
+}).to(canvasIntro, 0.25, {
+  x: -325,
+  y: -100
+}).from(chap_1, 0.25, {
   x: 100,
   autoAlpha: 0
-}).from(chap_2, 1, {
-  x: 150,
-  autoAlpha:0
-}).from(chap_3, 1, {
+}).from(chap_2, 0.25, {
+  x: -150,
+  autoAlpha: 0
+}).from(chap_3, 0.25, {
   x: 200,
   autoAlpha: 0
-}).from(chap_4, 1, {
-  x: 250,
+}).from(chap_4, 0.25, {
+  x: -250,
   autoAlpha: 0
 }).from(chap_5, 1, {
   x: 300,
+  autoAlpha: 0,
+  ease: Elastic.easeOut,
+  onComplete: translucGear
+}).from(ulContent, 0.5, {
+  y: -100,
   autoAlpha: 0
-}).to(image, 2.5, {
-  ease: Elastic.easeOut.config(2.5, 0.2),
-  y: -500,
-  onComplete: hideImage
-}).from(gear, 1, {
-  width: 100,
-  y: -300,
+}).to(gear, 3, {
+  y: -600,
   onComplete: cogFinish
 });
 
@@ -50,16 +66,38 @@ function cogStart() {
 
 function cogFinish() {
   console.log('the animation is finished!');
-  content.style.display = 'none';
-  relay();
+  animate();
+  body.style.backgroundColor = 'black';
 }
 
-function hideImage() {
-  body.style.background = 'black';
-  image.style.display = 'none';
+function translucGear() {
+  gear.style.opacity = '0.25';
 }
 
-function relay() {
-  window.requestAnimationFrame(relay);
-    resume();
+function animate() {
+
+  let timer = 0.0001 * Date.now();
+
+  for (let i = 0, spLength = spheres.length; i < spLength; i++) {
+    let sphere = spheres[i];
+
+    sphere.position.x = 10 * Math.cos(timer + i);
+    sphere.position.y = 10 * Math.sin(timer + i * 1.1);
+  }
+
+  icos.rotation.x += 0.004;
+  icos.rotation.y += 0.004;
+
+  icos2.rotation.x += 0.001;
+  icos2.rotation.y += 0.001;
+
+  icosAlias.rotation.x += 0.004;
+  icosAlias.rotation.y += 0.004;
+
+  icos2Alias.rotation.x += 0.001;
+  icos2Alias.rotation.y += 0.001;
+
+  requestAnimationFrame(animate);
+
+  renderer.render(scene, camera);
 }

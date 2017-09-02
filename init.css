@@ -1,35 +1,55 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
-body {
-  background-color: #DAF7A6;
-  color: salmon;
-  display: flex;
-  font-size: 1rem;
-  font-family: 'Source Code Pro', monospace;
-  margin: 20px;
-  align-self: center;
-}
-
 a {
   text-decoration: none;
 }
 
+body {
+  background-color: teal;
+  display: flex;
+  color: salmon;
+  font-size: 1rem;
+  font-family: 'Source Code Pro', monospace;
+  margin: 50px;
+  padding: 10px;
+  flex-flow: column;
+  text-align: -webkit-center;
+}
+
 h1 {
+  margin: 30px;
+  color: turquoise;
   font-size: 3rem;
   font-family: inherit;
-  align-self: center;
+}
+
+img {
+  display: none;
+}
+
+ul {
+  border: 10px solid teal;
+  list-style-type: none;
+  width: 20%;
+  padding: 20px;
+}
+
+.gearSVG {
+  display: flex;
+  min-width: 100px;
+}
+
+.canvasIntro {
+  border: 10px dashed teal;
+  border-radius: 50%;
+  z-index: 0;
+  margin: -60px -40px 200px -40px;
+}
+
+.chapter {
+  background-color: rebeccaPurple;
+  border-bottom: 3px solid green;
 }
 
 .wrap-animate {
-  align-self: center;
-  text-align: center;
-  width: 100%;
-}
-
-canvas {
-  position: absolute;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  margin: -20px -20px -20px -20px;
+  align-items: center;
+  margin: 0px;
 }
