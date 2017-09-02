@@ -12,6 +12,13 @@ body {
   padding: 10px;
   flex-flow: column;
   text-align: -webkit-center;
+  width: 100%
+}
+
+button {
+  width: 140px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -49,7 +56,30 @@ ul {
   border-bottom: 3px solid green;
 }
 
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 3px solid #2b5565
+}
+
+.dots {
+  position: absolute;
+  margin-top: 30%;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .wrap-animate {
   align-items: center;
   margin: 0px;
+  opacity: 0;
+}
+
+.buttonList {
+    float: right;
+    margin-top: 20px;
+    margin-right: 0%
 }

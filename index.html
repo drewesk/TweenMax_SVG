@@ -11,11 +11,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
   <body>
 
+    <div class="dots" id="preLoader">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
     <div class="wrap-animate">
 
       <h1 class="title" id="title">Andrew Eskenazi</h1>
 
       <canvas class="canvasIntro" id="granular"></canvas>
+
+        <div class="buttonList" id="buttonGroup">
+          <Button id="playTween">Play</Button>
+          <Button id="pauseTween">Pause</Button>
+          <Button id="ResumeTween">Resume</Button>
+          <Button id="reverseTween">Reverse</Button>
+          <Button id="speedTween">SpeedUp</Button>
+          <Button id="slowTween">SlowDown</Button>
+          <Button id="seekTween">ReplayCurrentTween</Button>
+          <Button id="halfwayTween">50%</Button>
+          <Button id="restartTween">restart</Button>
+        </div>
 
         <ul>
           <li class="chapter" id="chap1">Chapter 1</li>
