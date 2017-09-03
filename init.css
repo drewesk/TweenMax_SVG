@@ -70,6 +70,7 @@ ul {
   margin-top: 30%;
   margin-left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .wrap-animate {
@@ -82,4 +83,11 @@ ul {
     float: right;
     margin-top: 20px;
     margin-right: 0%
+}
+
+.ae-logo {
+  position: absolute;
+  margin-left: 10%;
+  width: 150px;
+  height: 225px;
 }
